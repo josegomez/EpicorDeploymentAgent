@@ -14,12 +14,17 @@ namespace EpicorDeploymentAgent
         /// </summary>
         static void Main()
         {
+#if !DEBUG
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new svcEpicorDeployment()
             };
             ServiceBase.Run(ServicesToRun);
+#else
+            var svcEpicorDeployment = new svcEpicorDeployment();
+            svcEpicorDeployment.Start();
+#endif               
         }
     }
 }

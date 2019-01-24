@@ -1,0 +1,38 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EpicorDeploymentAgent" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DropPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\temp</Value>
+    </Setting>
+    <Setting Name="EpicorUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">manager</Value>
+    </Setting>
+    <Setting Name="EpicorPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">manager</Value>
+    </Setting>
+    <Setting Name="EpicorCompany" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C001</Value>
+    </Setting>
+    <Setting Name="EpicorSysConfigs" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Production\Client\config\EpicorLive10_SSL.sysconfig&lt;/string&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Production\Client\config\EpicorPilot10_SSL.sysconfig&lt;/string&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Production\Client\config\EpicorTest10_SSL.sysconfig&lt;/string&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Production\Client\config\EpicorTrain10_SSL.sysconfig&lt;/string&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorA_SSL.sysconfig&lt;/string&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorB_SSL.sysconfig&lt;/string&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorC_SSL.sysconfig&lt;/string&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorD_SSL.sysconfig&lt;/string&gt;
+  &lt;string&gt;C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorE_SSL.sysconfig&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="EpicorSolutionPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\epicor\ERP10.2Client\SG_Production\Client\Solution.exe</Value>
+    </Setting>
+    <Setting Name="LogLevel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">I</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
