@@ -40,7 +40,7 @@
             // svcInstaller
             // 
             this.svcInstaller.Description = "Epicor Automatic Cab Deployment Service";
-            this.svcInstaller.DisplayName = "Epicor Automatic Cab Deployemtn Service";
+            this.svcInstaller.DisplayName = "Epicor Automatic Cab Deployment Service";
             this.svcInstaller.ServiceName = "svcEpicorDeploymentSvc";
             this.svcInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 

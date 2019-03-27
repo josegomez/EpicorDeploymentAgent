@@ -30,6 +30,7 @@ namespace EpicorDeploymentAgent
 
         private void StartWatch()
         {
+            killSvc = false;
             theMain = new Thread(RunSvc);
             theMain.Start();
         }
@@ -73,7 +74,7 @@ namespace EpicorDeploymentAgent
                                 StartInfo = new ProcessStartInfo()
                                 {
                                     FileName = Settings.Default.EpicorSolutionPath,
-                                    Arguments = $"install /cabPath=\"{x}\" /userID=\"{Settings.Default.EpicorUser}\" /password=\"{Settings.Default.EpicorPassword}\" /config=\"{config}\" /logLevel={Settings.Default.LogLevel} /company=\"{Settings.Default.EpicorCompany}\"",
+                                    Arguments = $"install /cabPath=\"{x}\" /userID=\"{Settings.Default.EpicorUser}\" /password=\"{Settings.Default.EpicorPassword}\" /config=\"{config}\" /logLevel={Settings.Default.LogLevel} \"",
                                     UseShellExecute = false,
                                     RedirectStandardOutput = true,
                                     RedirectStandardError = true,
@@ -93,11 +94,10 @@ namespace EpicorDeploymentAgent
                                 sbGeneric.AppendLine("******************************************************************");
                             }
                         });
-
-                        //Console.WriteLine(sbGeneric.ToString());
                         logger.Info(sbGeneric.ToString());
                         
                     }
+                    File.Delete(x);
                 }
                 LogManager.Flush();
                 Thread.Sleep(60000);
