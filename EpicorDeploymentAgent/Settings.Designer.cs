@@ -12,7 +12,7 @@ namespace EpicorDeploymentAgent {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,7 @@ namespace EpicorDeploymentAgent {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\temp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\temp\\Deploy")]
         public string DropPath {
             get {
                 return ((string)(this["DropPath"]));
@@ -34,7 +34,7 @@ namespace EpicorDeploymentAgent {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("manager")]
+        [global::System.Configuration.DefaultSettingValueAttribute("deploy")]
         public string EpicorUser {
             get {
                 return ((string)(this["EpicorUser"]));
@@ -43,7 +43,7 @@ namespace EpicorDeploymentAgent {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("manager")]
+        [global::System.Configuration.DefaultSettingValueAttribute("deploy")]
         public string EpicorPassword {
             get {
                 return ((string)(this["EpicorPassword"]));
@@ -63,15 +63,9 @@ namespace EpicorDeploymentAgent {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
 <ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>C:\epicor\ERP10.2Client\SG_Production\Client\config\EpicorLive10_SSL.sysconfig</string>
-  <string>C:\epicor\ERP10.2Client\SG_Production\Client\config\EpicorPilot10_SSL.sysconfig</string>
-  <string>C:\epicor\ERP10.2Client\SG_Production\Client\config\EpicorTest10_SSL.sysconfig</string>
-  <string>C:\epicor\ERP10.2Client\SG_Production\Client\config\EpicorTrain10_SSL.sysconfig</string>
-  <string>C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorA_SSL.sysconfig</string>
-  <string>C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorB_SSL.sysconfig</string>
-  <string>C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorC_SSL.sysconfig</string>
-  <string>C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorD_SSL.sysconfig</string>
-  <string>C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorE_SSL.sysconfig</string>
+  <string>C:\Epicor\ERP10.2Client\Client\config\EpicorPilot10_SSL_NONSSO.sysconfig</string>
+  <string>C:\Epicor\ERP10.2Client\Client\config\EpicorTest10_SSL_NONSSO.sysconfig</string>
+  <string>C:\Epicor\ERP10.2Client\Client\config\EpicorTrain10_SSL_NONSSO.sysconfig</string>
 </ArrayOfString>")]
         public global::System.Collections.Specialized.StringCollection EpicorProdSysConfigs {
             get {
@@ -81,7 +75,7 @@ namespace EpicorDeploymentAgent {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\epicor\\ERP10.2Client\\SG_Production\\Client\\Solution.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Epicor\\ERP10.2Client\\Client\\Solution.exe")]
         public string EpicorSolutionPathProd {
             get {
                 return ((string)(this["EpicorSolutionPathProd"]));
@@ -99,7 +93,7 @@ namespace EpicorDeploymentAgent {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\epicor\\ERP10.2Client\\SG_Production\\Client\\Solution.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Epicor\\ERP10.2Client_Dev\\Client\\Solution.exe")]
         public string EpicorSolutionPathDev {
             get {
                 return ((string)(this["EpicorSolutionPathDev"]));

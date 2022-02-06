@@ -74,7 +74,8 @@ namespace EpicorDeploymentAgent
                                 StartInfo = new ProcessStartInfo()
                                 {
                                     FileName = Settings.Default.EpicorSolutionPathProd,
-                                    Arguments = $"install /cabPath=\"{x}\" /userID=\"{Settings.Default.EpicorUser}\" /password=\"{Settings.Default.EpicorPassword}\" /config=\"{config}\" /logLevel={Settings.Default.LogLevel} \"",
+                                    Arguments = $"install /cabPath=\"{x}\" /userID=\"{Settings.Default.EpicorUser}\" /password=\"{Settings.Default.EpicorPassword}\" /config=\"{config}\" /logLevel={Settings.Default.LogLevel}",
+                                    WorkingDirectory = Path.GetDirectoryName(Settings.Default.EpicorSolutionPathProd),
                                     UseShellExecute = false,
                                     RedirectStandardOutput = true,
                                     RedirectStandardError = true,
@@ -105,7 +106,8 @@ namespace EpicorDeploymentAgent
                                 StartInfo = new ProcessStartInfo()
                                 {
                                     FileName = Settings.Default.EpicorSolutionPathDev,
-                                    Arguments = $"install /cabPath=\"{x}\" /userID=\"{Settings.Default.EpicorUser}\" /password=\"{Settings.Default.EpicorPassword}\" /config=\"{config}\" /logLevel={Settings.Default.LogLevel} \"",
+                                    Arguments = $"install /cabPath=\"{x}\" /userID=\"{Settings.Default.EpicorUser}\" /password=\"{Settings.Default.EpicorPassword}\" /config=\"{config}\" /logLevel={Settings.Default.LogLevel}",
+                                    WorkingDirectory = Path.GetDirectoryName(Settings.Default.EpicorSolutionPathDev),
                                     UseShellExecute = false,
                                     RedirectStandardOutput = true,
                                     RedirectStandardError = true,
