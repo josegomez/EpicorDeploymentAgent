@@ -52,6 +52,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7C0FEC26862818B249AE68707710BDC1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2854C4B51C0B0A63D337C7180C5D22B7"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -59,12 +65,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A9FCC008D43F486DDBC9F7B57B2304AD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7C0FEC26862818B249AE68707710BDC1"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -225,6 +225,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_2854C4B51C0B0A63D337C7180C5D22B7"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -251,6 +256,11 @@
             "AssemblyAsmDisplayName" = "8:NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_7C0FEC26862818B249AE68707710BDC1"
+                    {
+                    "Name" = "8:NLog.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:NLog.dll"
             "TargetName" = "8:"
@@ -277,6 +287,11 @@
             "AssemblyAsmDisplayName" = "8:System.IO.Compression, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
                 "ScatterAssemblies"
                 {
+                    "_A9FCC008D43F486DDBC9F7B57B2304AD"
+                    {
+                    "Name" = "8:System.IO.Compression.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.IO.Compression.dll"
             "TargetName" = "8:"
@@ -353,7 +368,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Epicor Deployment Agent"
         "ProductCode" = "8:{005EAC81-4831-4C62-AAD3-8AC5052738FE}"
-        "PackageCode" = "8:{6FEE550C-3997-4214-AD38-216FCB8178A0}"
+        "PackageCode" = "8:{2CAD2082-5CBD-4555-B28B-B2924965C75A}"
         "UpgradeCode" = "8:{0BAFBF87-1928-46B6-BE82-8A47CC086EF9}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -361,7 +376,7 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Jose C Gomez"
+        "Manufacturer" = "8:Stephen Gould"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:EpicorDeploymentAgentInstaller"

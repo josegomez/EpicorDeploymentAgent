@@ -64,7 +64,7 @@ namespace EpicorDeploymentAgent
                     if(Path.GetExtension(x).Equals(".cab",StringComparison.OrdinalIgnoreCase))
                     {
                         logger.Info($"Found File: {x} Processing...");
-                        Parallel.ForEach(Settings.Default.EpicorSysConfigs.Cast<string>(), (config)=> {
+                        Parallel.ForEach(Settings.Default.EpicorProdSysConfigs.Cast<string>(), (config)=> {
                             StringBuilder sbOutput = new StringBuilder();
                             sbOutput.AppendLine("******************************************************************");
                             sbOutput.AppendLine($"Importing Cab {x}");
@@ -73,7 +73,7 @@ namespace EpicorDeploymentAgent
                             {
                                 StartInfo = new ProcessStartInfo()
                                 {
-                                    FileName = Settings.Default.EpicorSolutionPath,
+                                    FileName = Settings.Default.EpicorSolutionPathProd,
                                     Arguments = $"install /cabPath=\"{x}\" /userID=\"{Settings.Default.EpicorUser}\" /password=\"{Settings.Default.EpicorPassword}\" /config=\"{config}\" /logLevel={Settings.Default.LogLevel} \"",
                                     UseShellExecute = false,
                                     RedirectStandardOutput = true,
@@ -94,6 +94,38 @@ namespace EpicorDeploymentAgent
                                 sbGeneric.AppendLine("******************************************************************");
                             }
                         });
+
+                        Parallel.ForEach(Settings.Default.EpicorDevSysConfigs.Cast<string>(), (config) => {
+                            StringBuilder sbOutput = new StringBuilder();
+                            sbOutput.AppendLine("******************************************************************");
+                            sbOutput.AppendLine($"Importing Cab {x}");
+                            sbOutput.AppendLine($"Into Environment {config}");
+                            Process proc = new Process()
+                            {
+                                StartInfo = new ProcessStartInfo()
+                                {
+                                    FileName = Settings.Default.EpicorSolutionPathDev,
+                                    Arguments = $"install /cabPath=\"{x}\" /userID=\"{Settings.Default.EpicorUser}\" /password=\"{Settings.Default.EpicorPassword}\" /config=\"{config}\" /logLevel={Settings.Default.LogLevel} \"",
+                                    UseShellExecute = false,
+                                    RedirectStandardOutput = true,
+                                    RedirectStandardError = true,
+                                    CreateNoWindow = true
+                                }
+                            };
+                            proc.Start();
+
+
+                            sbOutput.AppendLine(proc.StandardOutput.ReadToEnd());
+                            sbOutput.AppendLine(proc.StandardError.ReadToEnd());
+                            proc.WaitForExit();
+
+                            lock (sbGeneric)
+                            {
+                                sbGeneric.AppendLine(sbOutput.ToString());
+                                sbGeneric.AppendLine("******************************************************************");
+                            }
+                        });
+
                         logger.Info(sbGeneric.ToString());
                         
                     }

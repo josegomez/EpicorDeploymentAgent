@@ -12,7 +12,7 @@ namespace EpicorDeploymentAgent {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -73,18 +73,18 @@ namespace EpicorDeploymentAgent {
   <string>C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorD_SSL.sysconfig</string>
   <string>C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorE_SSL.sysconfig</string>
 </ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection EpicorSysConfigs {
+        public global::System.Collections.Specialized.StringCollection EpicorProdSysConfigs {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["EpicorSysConfigs"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["EpicorProdSysConfigs"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\epicor\\ERP10.2Client\\SG_Production\\Client\\Solution.exe")]
-        public string EpicorSolutionPath {
+        public string EpicorSolutionPathProd {
             get {
-                return ((string)(this["EpicorSolutionPath"]));
+                return ((string)(this["EpicorSolutionPathProd"]));
             }
         }
         
@@ -94,6 +94,27 @@ namespace EpicorDeploymentAgent {
         public string LogLevel {
             get {
                 return ((string)(this["LogLevel"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\epicor\\ERP10.2Client\\SG_Production\\Client\\Solution.exe")]
+        public string EpicorSolutionPathDev {
+            get {
+                return ((string)(this["EpicorSolutionPathDev"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>C:\epicor\ERP10.2Client\SG_Development\Client\config\EpicorE_SSL.sysconfig</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection EpicorDevSysConfigs {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["EpicorDevSysConfigs"]));
             }
         }
     }
